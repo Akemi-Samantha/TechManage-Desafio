@@ -25,7 +25,6 @@
 		<java.version>17</java.version>
 	</properties>
 
-	<!-- ✅ Força uso do Maven Central -->
 	<repositories>
 		<repository>
 			<id>central</id>
@@ -85,7 +84,7 @@
 
 	<build>
 		<plugins>
-			<!-- Plugin para compilar com suporte ao Lombok -->
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -99,7 +98,7 @@
 				</configuration>
 			</plugin>
 
-			<!-- Plugin do Spring Boot -->
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -113,7 +112,7 @@
 				</configuration>
 			</plugin>
 
-			<!-- ✅ Corrige erro de encoding em application.properties -->
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
