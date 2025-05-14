@@ -42,7 +42,7 @@ O projeto é dividido em camadas bem definidas:
 ```
 gerenciar.usuario.desafio
 ├── adapter.input          # Entrada da aplicação (REST controllers, DTOs, Mappers)
-├── domain.entity / dto    # Regras de domínio (entidades, enums, DTOs)
+├── domain.entity          # Regras de domínio (entidades, enums, DTOs)
 ├── port.input             # Portas de entrada para os casos de uso (interfaces)
 ├── usecase                # Implementação da lógica central da aplicação
 ├── infra.repository       # Adapters de saída (JPA repositories)
@@ -94,7 +94,10 @@ Garante que o valor recebido em um campo `String` corresponda a um valor válido
 - Lombok
 - JUnit 5 + Mockito + mockito-inline
 
+---
+
 # 🚀 Como Executar e Testar a Aplicação Localmente
+
 
 ---
 
@@ -106,6 +109,80 @@ Antes de iniciar, certifique-se de ter instalado:
 - [Maven](https://maven.apache.org/)
 - [MySQL](https://dev.mysql.com/downloads/mysql/)
 - Uma IDE como [IntelliJ IDEA](https://www.jetbrains.com/idea/) (opcional)
+
+---
+
+## 📥 Clonando e Executando o Repositório
+
+Siga os passos abaixo para baixar o projeto e executá-lo na sua máquina local:
+
+```bash
+# 1. Clone o repositório a partir do GitHub
+git clone https://github.com/Akemi-Samantha/TechManage-Desafio.git
+
+# 2. Acesse o diretório do projeto
+cd TechManage-Desafio
+
+# 3. Aguarde a indexação do Maven (caso esteja usando uma IDE)
+```
+
+---
+
+### 🧑‍💻 Abrindo o projeto
+
+Você pode abrir o projeto de duas formas:
+
+- **Via terminal:** continue com os comandos abaixo.
+- **Via IDE (ex: IntelliJ IDEA):** abra a pasta clonada como projeto Maven e aguarde a sincronização.
+
+---
+
+### ▶️ Executando o projeto
+
+#### Pelo terminal:
+
+```bash
+# Compila e sobe a aplicação Spring Boot
+./mvnw spring-boot:run
+```
+
+#### Pela IntelliJ:
+
+1. Navegue até a classe `DesafioApplication.java`
+2. Clique com o botão direito e selecione `Run 'DesafioApplication'`
+
+A API estará disponível em:
+
+```
+http://localhost:8080/api/users
+```
+
+---
+
+### 🧪 Rodando os testes
+
+#### Pelo terminal:
+
+```bash
+./mvnw test
+```
+
+#### Pela IDE:
+
+- Clique com o botão direito sobre qualquer classe de teste (ex: `UserControllerTest.java`)
+- Selecione: **Run 'ClasseDeTeste'**
+
+---
+
+### 📡 Testando a API
+
+Você pode usar ferramentas como:
+
+- [Postman](https://www.postman.com/)
+- [Insomnia](https://insomnia.rest/)
+- Extensões de teste de API no próprio IntelliJ
+
+
 
 ---
 
